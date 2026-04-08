@@ -1,0 +1,127 @@
+.section {
+  position: relative;
+  width: 100%;
+  background: var(--nmims-off-white, #faf8f4);
+}
+
+.backgroundWrap {
+  width: 100%;
+  background-color: var(--nmims-off-white, #faf8f4);
+  line-height: 0;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlayCard {
+  width: min(1140px, calc(100% - 32px));
+  margin: 16px auto 0;
+  padding-bottom: 40px;
+  background: var(--nmims-cream, #f8f6f0);
+  border-radius: 2px;
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.14);
+  border: 1px solid #d4d0c8;
+  padding: 2rem 2.25rem;
+  display: grid;
+  grid-template-columns: minmax(200px, 280px) 1fr;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.leftSide {
+  position: relative;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accentCircle {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  width: 76px;
+  height: 76px;
+  background: #e85a2b;
+  border-radius: 50%;
+}
+
+.leftImageWrap {
+  position: relative;
+  z-index: 1;
+}
+
+.leftImage {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(1);
+}
+
+.rightSide h2 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-serif-display, Georgia, serif);
+  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+  font-weight: 600;
+  color: #2c1f37;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+.underlined {
+  border-bottom: 3px solid #2c1f37;
+  padding-bottom: 2px;
+}
+
+.rightSide h3 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-sans-ui, sans-serif);
+  font-size: clamp(0.9rem, 1.35vw, 1rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.35;
+}
+
+.rightSide p {
+  margin: 0;
+  color: #3a363f;
+  line-height: 1.65;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .overlayCard {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin: 12px auto 0;
+    padding: 1.35rem 1.15rem 1.75rem;
+    width: calc(100% - 24px);
+    padding-bottom: 28px;
+  }
+
+  .leftSide {
+    min-height: 140px;
+  }
+
+  .leftImage {
+    max-width: 200px;
+  }
+
+  .rightSide h2 {
+    font-size: 1.45rem;
+  }
+
+  .rightSide h3 {
+    font-size: 0.95rem;
+  }
+
+  .rightSide p {
+    font-size: 0.875rem;
+  }
+}

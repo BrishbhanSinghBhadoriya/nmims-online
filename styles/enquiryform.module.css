@@ -1,0 +1,127 @@
+.formBox {
+  width: 100%;
+  max-width: 380px;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.modalForm {
+  margin: auto;
+  z-index: 1001;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.formBox h2 {
+  font-family: var(--font-serif-display, Georgia, serif);
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin: 0 0 0.25rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 1.25rem;
+}
+
+.inputGroup {
+  margin-bottom: 0.75rem;
+}
+
+.inputGroup label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.35rem;
+}
+
+.inputGroup input,
+.inputGroup select {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.inputGroup input:focus,
+.inputGroup select:focus {
+  border-color: #c8102e;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 1.25rem;
+  cursor: pointer;
+}
+
+.checkbox input {
+  margin-top: 2px;
+}
+
+.formBox button[type="submit"] {
+  width: 100%;
+  padding: 0.85rem;
+  background: #c8102e;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.formBox button[type="submit"]:hover {
+  background: #a00d25;
+}
+
+.formBox button[type="submit"]:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.successMsg {
+  color: #27ae60;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.errorMsg {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .formBox {
+    padding: 1.5rem;
+  }
+  
+  .formBox h2 {
+    font-size: 1.8rem;
+  }
+}

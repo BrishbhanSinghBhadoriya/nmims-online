@@ -1,9 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
-import '../styles/globals.css'
-import Navbar from './components/navbar'
-import { ModalProvider } from '@/context/ModalContext'
-import EnquiryModal from './components/modal'
 
 export const metadata: Metadata = {
   title: 'NMIMS Online MBA | Premium Business Education',
@@ -17,24 +13,14 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-export default function RootLayout({
+export default function NmimsOnlineLayout({
   children,
 }: {
   children: ReactNode
 }) {
   return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      </head>
-      <body>
-        <ModalProvider>
-          <Navbar />
-          {children}
-          <EnquiryModal />
-        </ModalProvider>
-      </body>
-    </html>
+    <div className="nmimsOnlineLayout">
+      {children}
+    </div>
   )
 }

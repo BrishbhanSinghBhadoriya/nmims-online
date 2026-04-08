@@ -1,0 +1,28 @@
+.specializations {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  background: transparent;
+}
+
+.desktopImage,
+.mobileImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.mobileImage {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktopImage {
+    display: none;
+  }
+
+  .mobileImage {
+    display: block;
+  }
+}

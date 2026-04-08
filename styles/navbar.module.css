@@ -1,0 +1,108 @@
+.topHeader {
+  width: 100%;
+  background-color: var(--nmims-header-red, #c8102e);
+  display: flex;
+  justify-content: center;
+}
+
+.topContainer {
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  padding: 18px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerImage {
+  width: min(100%, 720px);
+  height: auto;
+}
+
+.mobileTopBar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileTopBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: #faf8f4;
+    padding: 14px 12px;
+  }
+
+  .offerWrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #34173a;
+    border-radius: 16px;
+    padding: 10px 12px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .offerText {
+    margin: 0;
+    color: #ffffff;
+    font-size: 10px;
+    line-height: 1.25;
+    max-width: 52px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .timer {
+    display: flex;
+    gap: 6px;
+  }
+
+  .timeChip {
+    background: white;
+    color: black;
+    padding: 4px 6px 3px;
+    border-radius: 12px;
+    min-width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.05;
+  }
+
+  .timeChip strong {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .timeChip small {
+    font-size: 9px;
+    font-weight: 600;
+  }
+
+  .applyBtn {
+    background: #e31837;
+    color: white;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 13px;
+    width: 96px;
+    min-height: 72px;
+    line-height: 1.15;
+    flex-shrink: 0;
+  }
+
+  .topContainer {
+    padding: 8px 12px;
+  }
+
+  .headerImage {
+    width: min(100%, 340px);
+  }
+}

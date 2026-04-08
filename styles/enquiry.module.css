@@ -1,0 +1,72 @@
+.enquiryPage {
+  padding: 4rem 1.5rem;
+  background: #f3f4f6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.textSection h1 {
+  margin-bottom: 0.75rem;
+}
+
+.textSection p {
+  color: var(--text-light);
+}
+
+.benefits {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem 1.25rem;
+}
+
+.benefit {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.icon {
+  color: var(--primary-red);
+}
+
+.contactInfo {
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+.formSection {
+  max-width: 480px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .formSection {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+}
+

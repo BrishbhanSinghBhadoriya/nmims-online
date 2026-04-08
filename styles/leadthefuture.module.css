@@ -1,0 +1,145 @@
+.leadSection {
+  padding: 4rem 1rem;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #3b1e42;
+  margin: 0;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background: #3b1e42;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.cardTop {
+  background: #3b1e42;
+  padding: 1.5rem;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.cardTop h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.iconWrapper {
+  align-self: flex-end;
+}
+
+.icon {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+}
+
+.cardBottom {
+  background: #d1ae6d;
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.cardBottom p {
+  color: #333;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.responsiveImageWrapper {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.desktopImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.mobileImage {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .desktopImage {
+    display: none;
+  }
+
+  .mobileImage {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .header h2 {
+    font-size: 1.8rem;
+  }
+
+  .responsiveImageWrapper {
+    margin-top: 2rem;
+  }
+}

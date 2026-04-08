@@ -1,0 +1,56 @@
+.hero {
+  min-height: 100vh;
+  background: url('/banner4.jpg') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mobileBanner {
+  display: none;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 3rem 1.5rem 3rem 0;
+  gap: 2rem;
+  flex: 1;
+}
+
+.leftSpace {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background: none;
+    min-height: auto;
+    display: block;
+    padding-bottom: 0;
+  }
+
+  .container {
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    max-width: 100%;
+  }
+
+  .mobileBanner {
+    display: block;
+    width: 100%;
+    aspect-ratio: 419 / 520;
+    background: url('/banner5.png') no-repeat center top;
+    background-size: 100% 100%;
+  }
+
+  .leftSpace {
+    display: none;
+  }
+}

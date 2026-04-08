@@ -1,0 +1,229 @@
+/* ========== CTA SECTION STYLES ========== */
+
+.cta {
+  padding: 3rem 1rem;
+  background: #ffffff;
+  color: #111;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* CTA Content - Two Column Layout */
+.ctaContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.ctaLeft {
+  flex: 1;
+}
+
+.ctaRight {
+  flex: 0 0 auto;
+  width: 400px;
+}
+
+.ctaTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid #000000;
+  display: inline-block;
+}
+
+.ctaAddress {
+  font-size: 1.50rem;
+  color: #0d0000;
+  line-height: 1.2;
+  margin: 1rem 0 0 0;
+}
+
+.ctaImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Disclaimer Box */
+.disclaimerBox {
+  background: #f5f5f5;
+  padding: 2.0rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  border-left: 4px solid #040404;
+}
+
+.disclaimerSmall {
+  font-size: 0.9rem;
+  color: #080808;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Info Block */
+.infoBlock {
+  background: #ffffff;
+  padding: 2rem;
+  border-top: 4px solid #2a1f35;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.infoTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.8rem;
+  border-bottom: 3px solid #2a1f35;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}
+
+.infoContent {
+  text-align: center;
+  font-size: 1.50rem;
+  color: #080808;
+  line-height: 1.7;
+  margin: 1.5rem 0 0 0;
+}
+
+/* ========== FOOTER SECTION STYLES ========== */
+
+.footer {
+  width: 100%;
+  background: linear-gradient(180deg, #3a3a3a 0%, #323232 100%);
+  color: #ffffff;
+  padding: 3rem 1rem;
+  margin-top: 0;
+}
+
+.footerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.disclaimerSection {
+  margin-bottom: 2rem;
+}
+
+.disclaimerText {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 1.2rem 0;
+  color: #e8e8e8;
+  text-align: center;
+  font-weight: 400;
+}
+
+.disclaimerText strong {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #666, transparent);
+  margin: 2rem 0;
+  opacity: 0.6;
+}
+
+.copyrightSection {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.copyrightText {
+  font-size: 0.85rem;
+  color: #a8a8a8;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 1024px) {
+  .ctaContent {
+    flex-direction: column;
+  }
+
+  .ctaRight {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 2rem 1rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.4rem;
+  }
+
+  .ctaAddress {
+    font-size: 0.9rem;
+  }
+
+  .infoBlock {
+    padding: 1.5rem 1rem;
+  }
+
+  .infoTitle {
+    font-size: 1.2rem;
+  }
+
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .disclaimerText {
+    font-size: 0.9rem;
+    margin: 1rem 0;
+  }
+
+  .copyrightText {
+    font-size: 0.8rem;
+  }
+
+  .divider {
+    margin: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .ctaTitle {
+    font-size: 1.2rem;
+    border-bottom: 2px solid #060607;
+  }
+
+  .disclaimerBox {
+    padding: 1rem;
+  }
+
+  .infoBlock {
+    padding: 1rem;
+  }
+
+  .disclaimerText {
+    font-size: 0.85rem;
+  }
+}

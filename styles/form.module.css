@@ -1,0 +1,152 @@
+.form {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 1.75rem;
+  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.18);
+  border: 1px solid var(--border-color);
+}
+
+.formSubtitle {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  margin-bottom: 1.1rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.formRow > .formGroup {
+  flex: 1;
+}
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin: 1.25rem 0 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.consent input {
+  margin-top: 0.2rem;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #c41e3a, #ff6b35);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.disclaimer {
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.errorMessage {
+  margin-bottom: 1rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  background: rgba(244, 67, 54, 0.07);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  color: #b91c1c;
+  font-size: 0.85rem;
+}
+
+.successMessage {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 1.75rem;
+  text-align: center;
+  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.18);
+  border: 1px solid var(--border-color);
+}
+
+.successIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  margin: 0 auto 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #22c55e;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 0.4rem;
+}
+
+.nextSteps {
+  margin-top: 1.25rem;
+  text-align: left;
+}
+
+.nextSteps ul {
+  padding-left: 1.1rem;
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .form {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .formRow {
+    flex-direction: column;
+  }
+}
+
