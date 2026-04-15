@@ -9,15 +9,15 @@
   max-width: 1200px;
   width: 100%;
   text-align: center;
-  padding: 18px 16px;
+  padding: 12px 16px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .headerImage {
-  width: min(100%, 720px);
-  height: auto;
+  width: min(90%, 680px);
+  height: min(90%, 72px);
 }
 
 .mobileTopBar {
@@ -31,7 +31,7 @@
     align-items: center;
     gap: 10px;
     background: #faf8f4;
-    padding: 14px 12px;
+    padding: 10px 12px;
   }
 
   .offerWrap {
@@ -40,7 +40,7 @@
     gap: 10px;
     background: #34173a;
     border-radius: 16px;
-    padding: 10px 12px;
+    padding: 6px 12px;
     flex: 1;
     min-width: 0;
   }
@@ -64,9 +64,9 @@
   .timeChip {
     background: white;
     color: black;
-    padding: 4px 6px 3px;
+    padding: 3px 6px 2px;
     border-radius: 12px;
-    min-width: 40px;
+    min-width: 36px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,12 +74,12 @@
   }
 
   .timeChip strong {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
   }
 
   .timeChip small {
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 600;
   }
 
@@ -87,13 +87,13 @@
     background: #e31837;
     color: white;
     border: none;
-    padding: 12px 14px;
-    border-radius: 14px;
+    padding: 8px 12px;
+    border-radius: 12px;
     font-weight: 700;
     cursor: pointer;
-    font-size: 13px;
-    width: 96px;
-    min-height: 72px;
+    font-size: 12px;
+    width: 88px;
+    min-height: 56px;
     line-height: 1.15;
     flex-shrink: 0;
   }

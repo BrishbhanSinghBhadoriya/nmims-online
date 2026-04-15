@@ -72,9 +72,9 @@ export default function Navbar() {
           <Image
             src="/nmims_logo.png"   
             alt="NMIMS Header"
-            width={720}
-            height={92}
-            sizes="(max-width: 768px) 440px, 720px"
+            width={640}
+            height={72}
+            sizes="(max-width: 640px) 320px, 640px"
             className={styles.headerImage}
             priority
           />

@@ -2,9 +2,12 @@
   position: relative;
   width: 100%;
   background: var(--nmims-off-white, #faf8f4);
+  padding-bottom: 140px; /* 👈 overlap ke liye space */
 }
 
+/* Background */
 .backgroundWrap {
+  position: relative; /* 👈 important */
   width: 100%;
   background-color: var(--nmims-off-white, #faf8f4);
   line-height: 0;
@@ -13,26 +16,34 @@
 .backgroundImage {
   width: 100%;
   height: auto;
+  max-height: 1040px; /* 👈 image choti */
+  object-fit: cover;
   display: block;
 }
 
+/* Overlay Card */
 .overlayCard {
+  position: absolute;  /* 👈 overlap enable */
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15%;  /* 👈 25% overlap */
+
   width: min(1140px, calc(100% - 32px));
-  margin: 16px auto 0;
-  padding-bottom: 40px;
   background: var(--nmims-cream, #f8f6f0);
-  border-radius: 2px;
+  border-radius: 6px;
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.14);
   border: 1px solid #d4d0c8;
   padding: 2rem 2.25rem;
+
   display: grid;
   grid-template-columns: minmax(200px, 280px) 1fr;
   gap: 2rem;
   align-items: center;
-  position: relative;
   z-index: 2;
+  transition: all 0.3s ease;
 }
 
+/* Left */
 .leftSide {
   position: relative;
   min-height: 180px;
@@ -58,19 +69,19 @@
 
 .leftImage {
   width: 100%;
-  max-width: 240px;
+  max-width: 220px;
   height: auto;
   object-fit: contain;
   filter: grayscale(1);
 }
 
+/* Right */
 .rightSide h2 {
   margin: 0 0 0.5rem;
   font-family: var(--font-serif-display, Georgia, serif);
   font-size: clamp(1.25rem, 2.2vw, 1.7rem);
   font-weight: 600;
   color: #2c1f37;
-  letter-spacing: 0.01em;
   line-height: 1.2;
 }
 
@@ -81,11 +92,9 @@
 
 .rightSide h3 {
   margin: 0 0 0.75rem;
-  font-family: var(--font-sans-ui, sans-serif);
   font-size: clamp(0.9rem, 1.35vw, 1rem);
   font-weight: 700;
   color: #1a1a1a;
-  line-height: 1.35;
 }
 
 .rightSide p {
@@ -95,14 +104,20 @@
   font-size: 0.9rem;
 }
 
+/* Responsive */
 @media (max-width: 900px) {
   .overlayCard {
+    position: static; /* 👈 mobile me overlap hata diya */
+    transform: none;
+    margin: -40px auto 0; /* 👈 smooth overlap feel */
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    margin: 12px auto 0;
     padding: 1.35rem 1.15rem 1.75rem;
     width: calc(100% - 24px);
-    padding-bottom: 28px;
+  }
+
+  .section {
+    padding-bottom: 40px;
   }
 
   .leftSide {
@@ -110,11 +125,11 @@
   }
 
   .leftImage {
-    max-width: 200px;
+    max-width: 180px;
   }
 
   .rightSide h2 {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
   }
 
   .rightSide h3 {
