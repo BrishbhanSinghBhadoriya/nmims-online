@@ -6,47 +6,44 @@ import styles from '@/styles/nmimsacc.module.css'
 export default function NmimsAcc() {
   return (
     <section className={styles.section}>
-      
-      {/* Background Image */}
-      <div className={styles.backgroundWrap}>
-        <Image
-          src="/nmimsacc.webp"
-          alt="NMIMS Accreditation Background"
-          width={1600}
-          height={400}   // 👈 chota height
-          sizes="100vw"
-          className={styles.backgroundImage}
-          priority
-        />
+      <div className={styles.container}>
         
-        {/* Overlay Card */}
-        <div className={styles.overlayCard}>
-          <div className={styles.leftSide}>
-            <div className={styles.accentCircle} />
-            <div className={styles.leftImageWrap}>
-              <Image
-                src="/nmelevate.webp"
-                alt="NMIMS Campus"
-                width={220}
-                height={140}
-                sizes="(max-width: 900px) 180px, 220px"
-                className={styles.leftImage}
-              />
-            </div>
+        {/* Left Side: Orange background with woman */}
+        <div className={styles.leftSide}>
+          <div className={styles.whiteBox} />
+          <div className={styles.purpleBox} />
+          <div className={styles.womanWrapper}>
+            <Image
+              src="/bfr_img1.jpg"
+              alt="Professional Woman"
+              width={400}
+              height={500}
+              className={styles.womanImage}
+            />
           </div>
+        </div>
 
-          <div className={styles.rightSide}>
-            <h2>
-              <span className={styles.underlined}>Elevate</span> Your Career
+        {/* Right Side: Content */}
+        <div className={styles.rightSide}>
+          <div className={styles.content}>
+            <h2 className={styles.heading}>
+              Elevate Your Career
+              <span className={styles.underline} />
             </h2>
-            <h3>An MBA program to launch your career to the next level!</h3>
-            <p>
-              Get ready to take your career to the next level with NMIMS CDOE&apos;s MBA program. Our five
-              contemporary specialisations are designed for working professionals like you, offering flexible
-              learning options from expert faculty. Gain the skills and knowledge needed to succeed in today&apos;s
-              competitive business landscape. Enrol now to transform your future.
+            
+            <h3 className={styles.boldText}>
+              An MBA program to launch your career to the next level!
+            </h3>
+            
+            <p className={styles.description}>
+              Get ready to take your career to the next level with NMIMS CDOE&apos;s MBA program. 
+              Our five contemporary specialisations are designed for working professionals like you, 
+              offering flexible learning options from expert faculty.
             </p>
           </div>
+          
+          {/* Background Icons/Graphics */}
+          
         </div>
 
       </div>

@@ -1,30 +1,47 @@
 'use client'
 
-import Image from 'next/image'
 import styles from '@/styles/specializations.module.css'
+import { useModal } from '@/context/ModalContext'
 
 export default function Specializations() {
+  const { openModal } = useModal()
+
+  const specializationList = [
+    'Business Management',
+    'Marketing Management',
+    'Financial Management',
+    'Human Resource Management',
+    'Operation & Data Science Management'
+  ]
+
   return (
     <section id="specializations" className={styles.specializations}>
-      <Image
-        src="/nmims-specilization-desktop.png"
-        alt="NMIMS Specialization Desktop"
-        width={1600}
-        height={900}
-        sizes="(max-width: 768px) 0px, 100vw"
-        className={styles.desktopImage}
-        priority
-      />
+      <div className={styles.overlay} />
+      
+      <div className={styles.container}>
+        <h2 className={styles.heading}>
+          MBA Online <span>Specialisations</span>
+        </h2>
 
-      <Image
-        src="/nmims-specilization-phone.png"
-        alt="NMIMS Specialization Mobile"
-        width={480}
-        height={1800}
-        sizes="(max-width: 768px) 100vw, 0px"
-        className={styles.mobileImage}
-        priority
-      />
+        <div className={styles.card}>
+          <div className={styles.purpleTab}>
+            MBA Online Specialisations
+            <div className={styles.arrowDown} />
+          </div>
+
+          <ul className={styles.list}>
+            {specializationList.map((item, index) => (
+              <li key={index} className={styles.listItem}>
+                <span className={styles.bullet}>▪</span> {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <button className={styles.compareBtn} onClick={openModal}>
+          COMPARE TRENDING PROGRAMS
+        </button>
+      </div>
     </section>
   )
 }

@@ -26,78 +26,71 @@
 
 .formBox h2 {
   font-family: var(--font-serif-display, Georgia, serif);
-  font-size: 1.8rem;
-  color: #2c3e50;
+  font-size: 2.2rem;
+  color: #333;
   margin: 0 0 0.25rem;
+  font-weight: 500;
 }
 
 .subtitle {
-  font-size: 0.9rem;
-  color: #7f8c8d;
-  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 .inputGroup {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
-.inputGroup label {
+.fieldLabel {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: #333;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.2rem;
 }
 
 .inputGroup input,
 .inputGroup select {
   width: 100%;
-  padding: 0.65rem 0.85rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
   color: #333;
   outline: none;
-  transition: border-color 0.2s;
 }
 
-.inputGroup input:focus,
-.inputGroup select:focus {
-  border-color: #c8102e;
+.securityNotice {
+  background: #d4af37;
+  color: #333;
+  font-size: 0.75rem;
+  padding: 0.4rem;
+  text-align: center;
+  border-radius: 4px;
+  margin: 1rem 0;
+  font-weight: 500;
 }
 
-.checkbox {
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  font-size: 0.85rem;
-  color: #555;
-  margin-bottom: 1.25rem;
-  cursor: pointer;
-}
-
-.checkbox input {
-  margin-top: 2px;
-}
-
-.formBox button[type="submit"] {
+.submitBtn {
   width: 100%;
-  padding: 0.85rem;
-  background: #c8102e;
+  padding: 0.7rem;
+  background: #d32f2f;
   color: #fff;
   border: none;
-  border-radius: 25px;
-  font-size: 1rem;
-  font-weight: 700;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 500;
   cursor: pointer;
   transition: background 0.2s;
 }
 
-.formBox button[type="submit"]:hover {
-  background: #a00d25;
+.submitBtn:hover {
+  background: #b71c1c;
 }
 
-.formBox button[type="submit"]:disabled {
+.submitBtn:disabled {
   background: #ccc;
   cursor: not-allowed;
 }

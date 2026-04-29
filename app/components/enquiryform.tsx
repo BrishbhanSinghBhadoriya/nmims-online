@@ -8,7 +8,8 @@ export default function EnquiryForm({ isModal = false, onClose }: { isModal?: bo
   const router = useRouter()
   const pathname = usePathname()
   const [formData, setFormData] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     mobile: '',
     email: '',
     state: '',
@@ -82,26 +83,34 @@ export default function EnquiryForm({ isModal = false, onClose }: { isModal?: bo
           &times;
         </button>
       )}
-      <h2>Enquire Now</h2>
-      <p className={styles.subtitle}>Hurry Up & Get Free Counselling.ww</p>
+      <h2>Inquire Now</h2>
+      <p className={styles.subtitle}>Admissions Open.</p>
 
       <form onSubmit={handleSubmit}>
         <div className={styles.inputGroup}>
-          <label>Name</label>
           <input
             type="text"
-            placeholder="Enter Name"
+            placeholder="First Name"
             required
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            value={formData.firstName}
+            onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
           />
         </div>
 
         <div className={styles.inputGroup}>
-          <label>Mobile Number</label>
+          <input
+            type="text"
+            placeholder="Last Name"
+            required
+            value={formData.lastName}
+            onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+          />
+        </div>
+
+        <div className={styles.inputGroup}>
           <input
             type="tel"
-            placeholder="Enter Mobile"
+            placeholder="Mobile"
             required
             pattern="[0-9]{10}"
             value={formData.mobile}
@@ -110,10 +119,9 @@ export default function EnquiryForm({ isModal = false, onClose }: { isModal?: bo
         </div>
 
         <div className={styles.inputGroup}>
-          <label>Email ID</label>
           <input
             type="email"
-            placeholder="Enter Email id"
+            placeholder="Email"
             required
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -121,48 +129,44 @@ export default function EnquiryForm({ isModal = false, onClose }: { isModal?: bo
         </div>
 
         <div className={styles.inputGroup}>
-          <label>Select State</label>
+          <label className={styles.fieldLabel}>State/Province:</label>
           <select
             required
             value={formData.state}
             onChange={(e) => setFormData({ ...formData, state: e.target.value })}
           >
-            <option value="">Select Your State</option>
-            {states.map((s) => (
-              <option key={s} value={s}>{s}</option>
+            <option value="">--None--</option>
+            {states.map((state) => (
+              <option key={state} value={state}>
+                {state}
+              </option>
             ))}
           </select>
         </div>
 
         <div className={styles.inputGroup}>
-          <label>Select Course</label>
+          <label className={styles.fieldLabel}>Choose a Program:</label>
           <select
             required
             value={formData.course}
             onChange={(e) => setFormData({ ...formData, course: e.target.value })}
           >
-            <option value="">Select Course</option>
-            {courses.map((c) => (
-              <option key={c} value={c}>{c}</option>
+            <option value="">--None--</option>
+            {courses.map((course) => (
+              <option key={course} value={course}>
+                {course}
+              </option>
             ))}
           </select>
         </div>
 
-        <label className={styles.checkbox}>
-          <input
-            type="checkbox"
-            checked={formData.agreed}
-            onChange={(e) => setFormData({ ...formData, agreed: e.target.checked })}
-          />
-          I agree to get updates from counsellor
-        </label>
+        <div className={styles.securityNotice}>
+          Your Personal information is secure with us
+        </div>
 
-        <button type="submit" disabled={isSubmitting}>
+        <button type="submit" disabled={isSubmitting} className={styles.submitBtn}>
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </button>
-
-        {submitStatus === 'success' && <p className={styles.successMsg}>Thank you! We will contact you soon.</p>}
-        {submitStatus === 'error' && <p className={styles.errorMsg}>Something went wrong. Please try again.</p>}
       </form>
     </div>
   )

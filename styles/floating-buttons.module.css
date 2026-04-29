@@ -1,0 +1,85 @@
+.floatingContainer {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.applyNowBtn {
+  pointer-events: auto;
+  background: #d32f2f;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.applyNowBtn:hover {
+  background: #b71c1c;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.chatCircleBtn {
+  pointer-events: auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #d32f2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+}
+
+.chatCircleBtn:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logoWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatLogo {
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .floatingContainer {
+    bottom: 20px;
+    padding: 0 20px;
+  }
+
+  .applyNowBtn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .chatCircleBtn {
+    width: 50px;
+    height: 50px;
+  }
+}

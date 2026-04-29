@@ -4,6 +4,7 @@ import '../styles/globals.css'
 import Navbar from './components/navbar'
 import { ModalProvider } from '@/context/ModalContext'
 import EnquiryModal from './components/modal'
+import FloatingButtons from './components/FloatingButtons'
 
 export const metadata: Metadata = {
   title: 'NMIMS Online MBA | Premium Business Education',
@@ -33,6 +34,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <EnquiryModal />
+          <FloatingButtons />
         </ModalProvider>
       </body>
     </html>

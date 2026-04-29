@@ -26,76 +26,7 @@
 
 @media (max-width: 768px) {
   .mobileTopBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    background: #faf8f4;
-    padding: 10px 12px;
-  }
-
-  .offerWrap {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #34173a;
-    border-radius: 16px;
-    padding: 6px 12px;
-    flex: 1;
-    min-width: 0;
-  }
-
-  .offerText {
-    margin: 0;
-    color: #ffffff;
-    font-size: 10px;
-    line-height: 1.25;
-    max-width: 52px;
-    text-align: center;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-  }
-
-  .timer {
-    display: flex;
-    gap: 6px;
-  }
-
-  .timeChip {
-    background: white;
-    color: black;
-    padding: 3px 6px 2px;
-    border-radius: 12px;
-    min-width: 36px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1.05;
-  }
-
-  .timeChip strong {
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  .timeChip small {
-    font-size: 8px;
-    font-weight: 600;
-  }
-
-  .applyBtn {
-    background: #e31837;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 12px;
-    font-weight: 700;
-    cursor: pointer;
-    font-size: 12px;
-    width: 88px;
-    min-height: 56px;
-    line-height: 1.15;
-    flex-shrink: 0;
+    display: none;
   }
 
   .topContainer {

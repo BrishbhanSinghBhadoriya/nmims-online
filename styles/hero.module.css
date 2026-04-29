@@ -1,56 +1,243 @@
 .hero {
   min-height: 100vh;
-  background: url('/banner4.jpg') no-repeat center/cover;
+  position: relative;
+  background-color: #eddcf2;
   display: flex;
   align-items: center;
-  flex-direction: column;
-}
-
-.mobileBanner {
-  display: none;
+  justify-content: center;
+  padding: 2rem 0;
+  overflow: hidden;
 }
 
 .container {
-  max-width: 100%;
+  max-width: 1800px; /* Increased from 1600px to accommodate 1.5x image */
   width: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 3rem 1.5rem 3rem 0;
-  gap: 2rem;
-  flex: 1;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 4.5fr 1fr; /* Increased ratio to give image content more space */
+  align-items: center;
+  padding: 0 2rem;
+  gap: 3rem;
+  position: relative;
+  z-index: 2;
 }
 
-.leftSpace {
-  flex: 1;
-  min-width: 0;
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-width: 400px;
+}
+
+.mainTitle {
+  font-size: 4.5rem; /* Slightly larger to match bigger image */
+  color: #3b2a5a;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.subTitle {
+  font-size: 2.2rem;
+  color: #3b2a5a;
+  margin: 0;
+}
+
+.feeInfo {
+  font-size: 2rem;
+  color: #d32f2f;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.imageContent {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 6fr; /* Increased from 4fr to 6fr (~1.5x scaling in grid space) */
+  align-items: center;
+  gap: 2rem;
+}
+
+.womanWrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.womanImage {
+  width: 100%; /* Ensure it fills the newly expanded space */
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+
+
+.floatingLabel {
+  position: absolute;
+  background: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  z-index: 3;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.floatingLabel span {
+  color: #f58220;
+  font-weight: 700;
+}
+
+.label1 {
+  top: 15%;
+  left: -20%;
+}
+
+.label2 {
+  bottom: 15%;
+  left: -15%;
+}
+
+.label3 {
+  bottom: 30%;
+  right: -25%;
+}
+
+.formContent {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 10;
+  margin-left: -100px; /* Negative margin to overlap image from the right */
+}
+
+@media (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+  
+  .textContent {
+    width: 100%;
+    align-items: center;
+  }
+
+  .imageContent {
+    width: 100%;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formContent {
+    width: 100%;
+    justify-content: center;
+    order: 3;
+  }
+  
+  .mainTitle {
+    font-size: 2.8rem;
+  }
 }
 
 @media (max-width: 768px) {
   .hero {
-    background: none;
     min-height: auto;
-    display: block;
-    padding-bottom: 0;
-  }
-
-  .container {
-    flex-direction: column;
     padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     gap: 0;
-    max-width: 100%;
+    padding: 0;
+  }
+  
+  .imageContent {
+    display: block;
+    position: relative;
+    width: 100%;
+    order: 1;
+    margin: 0;
   }
 
-  .mobileBanner {
+  .textContent {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    z-index: 10;
+    text-align: center;
+    padding: 0;
+    pointer-events: none;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mainTitle {
+    font-size: 1.0rem;
+    color: #070606;
+    text-shadow: 2px 2px 4px rgba(234, 226, 226, 0.8);
+    font-weight: 600;
+  }
+
+  .subTitle {
+    font-size: 0.9rem;
+    color: #0e0d0d;
+    text-shadow: 1px 1px 3px rgba(246, 243, 243, 0.8);
+    font-weight: 500;
+  }
+
+  .feeInfo {
+    font-size: 0.8rem;
+   
+    color: rgb(242, 15, 15);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    width: fit-content;
+    margin: 4px auto 0;
+    font-weight: 700;
+  }
+
+  .womanImage {
+    position: relative;
+    left: auto;
+    transform: none;
+    width: 100%;
+    height: auto;
+    max-height: none; /* Removed limit to show full image */
+    object-fit: contain; /* Changed to contain to prevent cropping */
+    display: block;
+    z-index: 1;
+  }
+
+  .formContent {
+    order: 2;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    background: #f5f5f5;
+  }
+
+  .dottedCircle, .floatingLabel {
+    display: none;
+  }
+
+  .womanWrapper {
     display: block;
     width: 100%;
-    aspect-ratio: 419 / 520;
-    background: url('/banner5.png') no-repeat center top;
-    background-size: 100% 100%;
-  }
-
-  .leftSpace {
-    display: none;
   }
 }

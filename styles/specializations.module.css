@@ -1,28 +1,155 @@
 .specializations {
+  position: relative;
   width: 100%;
+  padding: 60px 20px;
+  background-image: url('/banner4.jpg'); /* Using banner4 as a placeholder background or bookshelves if available */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: #d4af37; /* Golden color */
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.heading span {
+  position: relative;
+}
+
+.heading span::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #d4af37;
+}
+
+.card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 900px;
+  min-height: 300px;
+  padding: 50px 80px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.purpleTab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #34173a;
+  color: white;
+  padding: 12px 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.arrowDown {
+  position: absolute;
+  bottom: -8px;
+  left: 120px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #34173a;
+}
+
+.list {
+  list-style: none;
   padding: 0;
   margin: 0;
-  line-height: 0;
-  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.desktopImage,
-.mobileImage {
-  display: block;
-  width: 100%;
-  height: auto;
+.listItem {
+  font-size: 1.25rem;
+  color: #3b2a5a;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.mobileImage {
-  display: none;
+.bullet {
+  color: #34173a;
+  font-size: 1rem;
+}
+
+.compareBtn {
+  margin-top: 40px;
+  background: #e9c46a; /* Golden/Yellow button */
+  color: #000;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.compareBtn:hover {
+  background: #f4a261;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
-  .desktopImage {
-    display: none;
+  .specializations {
+    padding: 40px 15px;
   }
 
-  .mobileImage {
-    display: block;
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    padding: 60px 30px 30px;
+  }
+
+  .listItem {
+    font-size: 1.1rem;
+  }
+
+  .compareBtn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 12px 20px;
   }
 }
