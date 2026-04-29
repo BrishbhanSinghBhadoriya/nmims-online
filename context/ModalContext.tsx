@@ -1,6 +1,6 @@
 'use client'
 
-import React, { createContext, useContext, useState, ReactNode } from 'react'
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react'
 
 interface ModalContextType {
   isModalOpen: boolean
@@ -15,6 +15,15 @@ export function ModalProvider({ children }: { children: ReactNode }) {
 
   const openModal = () => setIsModalOpen(true)
   const closeModal = () => setIsModalOpen(false)
+
+  // Auto-open modal after 3 seconds
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      openModal()
+    }, 3000)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <ModalContext.Provider value={{ isModalOpen, openModal, closeModal }}>
